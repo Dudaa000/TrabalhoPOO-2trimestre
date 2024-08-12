@@ -70,6 +70,7 @@ public abstract class Evento implements RelatorioReceita {
         return somaTotal;
     }
 
+
     @Override
     public void extrato_Receita() {
         JOptionPane.showMessageDialog(null, toString(), "Detalhes do Evento", JOptionPane.INFORMATION_MESSAGE);
@@ -90,6 +91,7 @@ public abstract class Evento implements RelatorioReceita {
         }
         JOptionPane.showMessageDialog(null, resultado, "Ingressos Vendidos", JOptionPane.INFORMATION_MESSAGE);
     }
+
 
     public String getNome() {
         return nome;

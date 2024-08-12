@@ -47,6 +47,7 @@ public class Main {
         }
     }
 
+
     private static void exibirReceitaTotalAcumulada(ArrayList<Evento> eventos) {
         double receitaTotal = 0;
         for (Evento evento : eventos) {
@@ -56,18 +57,10 @@ public class Main {
                 String.format("Receita Total Acumulada: R$ %.2f", receitaTotal),
                 "Receita Total", JOptionPane.INFORMATION_MESSAGE);
 
-        // Exibição dos detalhes dos ingressos vendidos
+
+        // Exibição dos detalhes dos ingressos vendidos, usando polimorfismo
         for (Evento evento : eventos) {
-            if (evento.getNome().equals("Moana2") ||
-                    evento.getNome().equals("Para Todos Os Garotos Que Já Amei") ||
-                    evento.getNome().equals("Um Tal Guimarães") ||
-                    evento.getNome().equals("Orquestra")) {
-                String detalhes = "Detalhes dos Ingressos para o Evento " + evento.getNome() + ":\n";
-                for (Ingresso ingresso : evento.ingressos_V) {
-                    detalhes += ingresso.toString() + "\n";
-                }
-                JOptionPane.showMessageDialog(null, detalhes, "Ingressos Vendidos", JOptionPane.INFORMATION_MESSAGE);
-            }
+            evento.listarIngressosVendidos();
         }
     }
 }
