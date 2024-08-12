@@ -33,6 +33,5 @@ public class Teatro extends Evento {
         return  (int)(quantiaIngressos * 0.1 - i);
     }
 
-
 }
 

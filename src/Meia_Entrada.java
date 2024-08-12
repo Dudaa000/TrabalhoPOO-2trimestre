@@ -5,3 +5,4 @@ public class Meia_Entrada extends Ingresso {
         super(data_venda, valor / 2, 'M'); // Dividindo o valor por 2 e definindo o tipo como 'M'
     }
 }
+

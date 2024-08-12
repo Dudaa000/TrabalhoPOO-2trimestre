@@ -5,3 +5,4 @@ public class Vip extends Ingresso {
         super(data_venda, valor * 2, 'V'); // Multiplicando o valor por 2 e definindo o tipo como 'V'
     }
 }
+

@@ -59,6 +59,7 @@ public abstract class Evento implements RelatorioReceita {
         return assentos_Disp() - quant;
     }
 
+
     @Override
     public double somaTotal_Receita() {
         double somaTotal = 0;
