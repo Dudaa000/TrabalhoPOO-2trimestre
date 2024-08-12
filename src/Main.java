@@ -10,11 +10,12 @@ public class Main {
         Evento PTOGQJA = new Filme("Para Todos Os Garotos Que Já Amei", "19:30", "Del Rey", "30/8/2024", 15.00);
         Evento UTG = new Teatro("Um Tal Guimarães", "17:30", "Casa De Teatro", "16/08/2024", 45.00);
         Evento orquestra = new Concerto("Orquestra", "16:00", "Sala De Minas", "20/08/2024", 50.00);
-
+        Evento deadpool = new Filme("Deadpool", "14:00", "Shopping Contagem", "16/08/2024", 35.00);
         eventos.add(moana);
         eventos.add(PTOGQJA);
         eventos.add(UTG);
         eventos.add(orquestra);
+        eventos.add(deadpool);
 
         // Simulação de venda de ingressos
         moana.add_I(new Ingresso(new Date(), 35.00, 'C'));
@@ -29,6 +30,15 @@ public class Main {
 
         orquestra.add_I(new Ingresso(new Date(), 50.00, 'C'));
         orquestra.add_I(new Vip(new Date(), 50.00)); // Valor base, será multiplicado por 2
+
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'C'));
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'C'));
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'C'));
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'M'));
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'V'));
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'M'));
+        deadpool.add_I(new Ingresso(new Date(), 35.00, 'M'));
+
 
         // Exibição de Eventos
         listarEventos(eventos);
